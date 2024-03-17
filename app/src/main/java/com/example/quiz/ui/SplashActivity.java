@@ -29,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
 
         Glide.with(this)
                 .asGif()
-                .load(R.drawable.coding)
+                .load(R.drawable.splash)
                 .into(imageView);
 
         new CountDownTimer(7000,1000){
