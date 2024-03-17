@@ -22,8 +22,10 @@ public class ScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ScreenActivity.this, CategoryActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |
+                        Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
     }
