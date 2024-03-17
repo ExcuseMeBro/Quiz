@@ -70,15 +70,46 @@ public class LanguageQuestionGameActivity extends AppCompatActivity {
         // TODO fix db
 //        list = QuestionHelper.getAllOfTheQuestions();
 
-        list.add(new Question("Quyida berilgan so`zga ma`nodosh so`zni toping: rohat.", "maza"));
+        list.add(new Question("Tilda nechta shaxs bor?", "3"));
 
-        list.add(new Question("5 yoshida 500 ta kitob òqigan bolaning ismini yozing. ", "Lev"));
+        list.add(new Question("Tilimizda nechta unli tovush bor?", "6"));
 
-        list.add(new Question("3-sinf darsligida berilgan “Ona yurt” she`rining muallifi kim?", "Dilshod Rajab"));
+        list.add(new Question("Tilimizda nechta undosh tovush bor?", "24"));
 
-        list.add(new Question("3-sinf darsligida berilgan “Vatan” hikoyasining muallifi kim?", "Xudoyberdi To`xtaboyev"));
+        list.add(new Question("O‘pkadan kelayotgan havo og‘iz bo‘shlig‘ida to‘siqqa uchramasa, qanday tovushlar hosil bo‘ladi?", "unli tovush"));
 
-        list.add(new Question("3-sinf darsligida berilgan “Vatan” hikoyasida podshoning suyukli xotini Malika faqat nima yer ekan?", "qush"));
+        list.add(new Question("O‘pkadan kelayotgan havo og‘iz bo‘shlig‘ida to‘siqqa uchrasa, qanday tovushlar hosil bo‘ladi?", "undosh tovush"));
+
+        list.add(new Question("Alifboda nechta harf bor?", "29"));
+
+        list.add(new Question("O‘zbek tilida nechta tovush bor?", "30"));
+
+        list.add(new Question("Tovushning yozuvdagi ifodasiga nima deyiladi?", "harf"));
+
+        list.add(new Question("Nechta? Qancha? Nechanchi? so‘roqlariga javob bo‘ladigan so‘z turkumi qaysi?", "Son"));
+
+        list.add(new Question("Kim? Nima? Qayer? so‘roqlariga javob bo‘ladigan so‘z turkumi qaysi?", "Ot"));
+
+        list.add(new Question("Gapning bosh bo‘laklari qaysilar?", "ega, kesim"));
+
+        list.add(new Question("Gapning bosh bo‘laklari qaysilar?", "ega, kesim"));
+
+        list.add(new Question("Qanday? Qanaqa? so‘roqlariga javob bo‘ladigan so‘z turkumi qaysi?", "Sifat"));
+
+        list.add(new Question("Nima qildi? Nima qilayapti? so‘roqlariga javob bo‘ladigan so‘z turkumi qaysi?", "Fe'l"));
+
+        list.add(new Question("Otlarda nechta kelishik bor?", "6"));
+
+        list.add(new Question("Ingliz tiliga “ona” so‘zi qanday tarjima qilinadi?", "mother"));
+
+        list.add(new Question("Amir Temur nechanchi yilda tug‘ilgan?", "1336-yil"));
+
+        list.add(new Question("Abu Ali ibn Sino nechanchi yilda tug‘ilgan?", "980-yil"));
+
+        list.add(new Question("Ibn Sino G‘arbda qanday nom bilan mashhur?", "Avitsenna"));
+
+        list.add(new Question("Jaloliddin Manguberdi qayerda tavallud topgan?", "Xorazm"));
+
 
         //Now we gonna shuffle the elements of the list so that we will get questions randomly
         Collections.shuffle(list);

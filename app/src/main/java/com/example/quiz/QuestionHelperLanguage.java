@@ -16,7 +16,7 @@ class QuestionHelperLanguage extends SQLiteOpenHelper {
 
     //If you want to add more questions or wanna update table values
     //or any kind of modification in db just increment version no.
-    private static final int DB_VERSION = 3;
+    private static final int DB_VERSION = 4;
     //Table name
     private static final String TABLE_NAME = "LANGUAGE";
     //Id of question
@@ -52,15 +52,45 @@ class QuestionHelperLanguage extends SQLiteOpenHelper {
     void allQuestion() {
         ArrayList<Question> arraylist = new ArrayList<>();
 
-        arraylist.add(new Question("Quyida berilgan so`zga ma`nodosh so`zni toping: rohat.", "maza"));
+        arraylist.add(new Question("Tilda nechta shaxs bor?", "3"));
 
-        arraylist.add(new Question("5 yoshida 500 ta kitob òqigan bolaning ismini yozing. ", "Lev"));
+        arraylist.add(new Question("Tilimizda nechta unli tovush bor?", "6"));
 
-        arraylist.add(new Question("3-sinf darsligida berilgan “Ona yurt” she`rining muallifi kim?", "Dilshod Rajab"));
+        arraylist.add(new Question("Tilimizda nechta undosh tovush bor?", "24"));
 
-        arraylist.add(new Question("3-sinf darsligida berilgan “Vatan” hikoyasining muallifi kim?", "Xudoyberdi To`xtaboyev"));
+        arraylist.add(new Question("O‘pkadan kelayotgan havo og‘iz bo‘shlig‘ida to‘siqqa uchramasa, qanday tovushlar hosil bo‘ladi?", "unli tovush"));
 
-        arraylist.add(new Question("3-sinf darsligida berilgan “Vatan” hikoyasida podshoning suyukli xotini Malika faqat nima yer ekan?", "qush"));
+        arraylist.add(new Question("O‘pkadan kelayotgan havo og‘iz bo‘shlig‘ida to‘siqqa uchrasa, qanday tovushlar hosil bo‘ladi?", "undosh tovush"));
+
+        arraylist.add(new Question("Alifboda nechta harf bor?", "29"));
+
+        arraylist.add(new Question("O‘zbek tilida nechta tovush bor?", "30"));
+
+        arraylist.add(new Question("Tovushning yozuvdagi ifodasiga nima deyiladi?", "harf"));
+
+        arraylist.add(new Question("Nechta? Qancha? Nechanchi? so‘roqlariga javob bo‘ladigan so‘z turkumi qaysi?", "Son"));
+
+        arraylist.add(new Question("Kim? Nima? Qayer? so‘roqlariga javob bo‘ladigan so‘z turkumi qaysi?", "Ot"));
+
+        arraylist.add(new Question("Gapning bosh bo‘laklari qaysilar?", "ega, kesim"));
+
+        arraylist.add(new Question("Gapning bosh bo‘laklari qaysilar?", "ega, kesim"));
+
+        arraylist.add(new Question("Qanday? Qanaqa? so‘roqlariga javob bo‘ladigan so‘z turkumi qaysi?", "Sifat"));
+
+        arraylist.add(new Question("Nima qildi? Nima qilayapti? so‘roqlariga javob bo‘ladigan so‘z turkumi qaysi?", "Fe'l"));
+
+        arraylist.add(new Question("Otlarda nechta kelishik bor?", "6"));
+
+        arraylist.add(new Question("Ingliz tiliga “ona” so‘zi qanday tarjima qilinadi?", "mother"));
+
+        arraylist.add(new Question("Amir Temur nechanchi yilda tug‘ilgan?", "1336-yil"));
+
+        arraylist.add(new Question("Abu Ali ibn Sino nechanchi yilda tug‘ilgan?", "980-yil"));
+
+        arraylist.add(new Question("Ibn Sino G‘arbda qanday nom bilan mashhur?", "Avitsenna"));
+
+        arraylist.add(new Question("Jaloliddin Manguberdi qayerda tavallud topgan?", "Xorazm"));
 
         this.addAllQuestions(arraylist);
 

@@ -32,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
                 .load(R.drawable.splash)
                 .into(imageView);
 
-        new CountDownTimer(7000,1000){
+        new CountDownTimer(3000,1000){
             public void onTick(long millisUntilFinished){
                 shimmer = new Shimmer();
                 shimmer.start(myShimmerTextView);

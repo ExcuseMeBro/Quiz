@@ -49,9 +49,6 @@ public class ClassroomActivity extends AppCompatActivity implements View.OnLongC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classroom);
 
-        ImageView mImageViewFilling = (ImageView) findViewById(R.id.think);
-        ((AnimationDrawable) mImageViewFilling.getDrawable()).start();
-
         implementMuscleLists();
         mainBlackboardRes = R.drawable.muscle;
         partsSize = muscleList.size();
