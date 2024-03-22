@@ -109,6 +109,7 @@ public class ForestActivity extends AppCompatActivity implements View.OnLongClic
     public void onBackPressed() {
         super.onBackPressed();
         mediaPlayer.stop();
+        finish();
     }
 
     @Override
@@ -214,6 +215,7 @@ public class ForestActivity extends AppCompatActivity implements View.OnLongClic
             playMusic(R.raw.oyoq);
         }
     }
+
 
     private void setBlackboardResource(int resId) {
         ImageView ivPart = new ImageView(ForestActivity.this);

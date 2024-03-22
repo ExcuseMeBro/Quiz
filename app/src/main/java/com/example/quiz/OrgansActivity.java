@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -101,6 +103,7 @@ public class OrgansActivity extends AppCompatActivity implements View.OnClickLis
         mediaPlayer = MediaPlayer.create(this, R.raw.organs);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
+        mediaPlayer.setVolume(0.3f,0.3f);
 
         implementCards();
     }
@@ -159,6 +162,7 @@ public class OrgansActivity extends AppCompatActivity implements View.OnClickLis
     public void onBackPressed() {
         super.onBackPressed();
         mediaPlayer.stop();
+        finish();
     }
 
 //    @Override
@@ -321,7 +325,6 @@ public class OrgansActivity extends AppCompatActivity implements View.OnClickLis
         for (int i = 0; i < 8; i++){
             // kartochkadagi otvet tanlansa
 
-
             if (v.getId() == listIv.get(i).getId() && ivQuestion.getVisibility() == View.VISIBLE) {
                 ImageView clickedView = listIv.get(i);
                 TextView answer = (TextView) findViewById(textViews.get(i));
@@ -338,9 +341,17 @@ public class OrgansActivity extends AppCompatActivity implements View.OnClickLis
                     answer.setText("");
                     correctAnswers++;
                     if (correctAnswers == 8) {
-                        Intent intent = new Intent(this, GameWonActivity.class);
-                        startActivity(intent);
-                        finish();
+                        final Handler handler = new Handler(Looper.getMainLooper());
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //Do something after 3000ms
+                                mediaPlayer.stop();
+                                finish();
+                                Intent intent = new Intent(OrgansActivity.this,GameWonActivity.class);
+                                startActivity(intent);
+                            }
+                        }, 3000);
                     } else {
                         setTextMainQuestion(selectedQuestions.get(correctAnswers).getQuestion());
                     }
@@ -348,8 +359,26 @@ public class OrgansActivity extends AppCompatActivity implements View.OnClickLis
 //                    textViews.remove(answer.getId());
 //                    listIv.remove(answer.getId());
 //                    hideElements();
+                    if (i == 0) {
+                        playMusic(R.raw.miya);
+                    } else if (i == 1) {
+                        playMusic(R.raw.opka);
+                    } else if (i == 2) {
+                        playMusic(R.raw.jigar);
+                    } else if (i == 3) {
+                        playMusic(R.raw.ichak);
+                    } else if (i == 4) {
+                        playMusic(R.raw.yurak);
+                    } else if (i == 5) {
+                        playMusic(R.raw.oshqozon);
+                    } else if (i == 6) {
+                        playMusic(R.raw.buyrak);
+                    } else if (i == 7) {
+                        playMusic(R.raw.ichak);
+                    }
                 } else {
-                    Toast.makeText(this, "Hato", Toast.LENGTH_SHORT).show();
+                    playMusic(R.raw.wrong);
+                    Toast.makeText(this, "Xato javob", Toast.LENGTH_SHORT).show();
                 }
             }
         }

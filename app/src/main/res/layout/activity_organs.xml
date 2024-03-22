@@ -152,8 +152,8 @@
 
             <ImageView
                 android:id="@+id/ivQuestion"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_width="199dp"
+                android:layout_height="182dp"
                 android:layout_marginBottom="184dp"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toTopOf="@+id/guiH60"
@@ -162,7 +162,7 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintWidth_percent="0.4"
-                app:srcCompat="@drawable/forest_blackboard" />
+                app:srcCompat="@color/white" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout

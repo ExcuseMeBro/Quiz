@@ -109,6 +109,7 @@ public class ClassroomActivity extends AppCompatActivity implements View.OnLongC
     public void onBackPressed() {
         super.onBackPressed();
         mediaPlayer.stop();
+        finish();
     }
 
     @Override
