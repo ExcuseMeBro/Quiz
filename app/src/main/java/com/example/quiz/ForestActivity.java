@@ -82,13 +82,13 @@ public class ForestActivity extends AppCompatActivity implements View.OnLongClic
 
     //Implement bone lists
     private void implementBoneLists() {
-        bonesList.add(R.drawable.v4_skeletone_part_panal_0);
-        bonesList.add(R.drawable.v4_skeletone_part_panal_1);
-        bonesList.add(R.drawable.v4_skeletone_part_panal_2);
-        bonesList.add(R.drawable.v4_skeletone_part_panal_3);
-        bonesList.add(R.drawable.v4_skeletone_part_panal_4);
-        bonesList.add(R.drawable.v4_skeletone_part_panal_5);
-        bonesList.add(R.drawable.v4_skeletone_part_panal_6);
+        bonesList.add(R.drawable.v4_skeletone_part_panal_0); // 2131165487
+        bonesList.add(R.drawable.v4_skeletone_part_panal_1); // 2131165488
+        bonesList.add(R.drawable.v4_skeletone_part_panal_2); // 2131165489
+        bonesList.add(R.drawable.v4_skeletone_part_panal_3); // 2131165490
+        bonesList.add(R.drawable.v4_skeletone_part_panal_4); // 2131165491
+        bonesList.add(R.drawable.v4_skeletone_part_panal_5); // 2131165492
+        bonesList.add(R.drawable.v4_skeletone_part_panal_6); // 2131165493
 
         boneFrameList.add(R.drawable.v4_skeletone_part_use_0);
         boneFrameList.add(R.drawable.v4_skeletone_part_use_1);
@@ -197,12 +197,31 @@ public class ForestActivity extends AppCompatActivity implements View.OnLongClic
         return false;
     }
 
+    private void sayPartName(int resId) {
+        if (resId - 7 == bonesList.get(0)) { // 2131165487
+            playMusic(R.raw.bosh);
+        } else if (resId - 7 == bonesList.get(1)) { // 2131165488
+            playMusic(R.raw.umurtqa);
+        } else if (resId - 7 == bonesList.get(2)) { // 2131165489
+            playMusic(R.raw.qol);
+        } else if (resId - 7 == bonesList.get(3)) { // 2131165490
+            playMusic(R.raw.oyoq);
+        } else if (resId - 7 == bonesList.get(4)) { // 2131165491
+            playMusic(R.raw.qol);
+        } else if (resId - 7 == bonesList.get(5)) { // 2131165492
+            playMusic(R.raw.kokrak);
+        } else if (resId - 7 == bonesList.get(6)) { // 2131165493
+            playMusic(R.raw.oyoq);
+        }
+    }
+
     private void setBlackboardResource(int resId) {
         ImageView ivPart = new ImageView(ForestActivity.this);
         ivPart.setImageResource(resId);
         ivPart.setId(resId);
         ivPart.setLayoutParams(body_frame.getLayoutParams());
         body_layout.addView(ivPart);
+        sayPartName(resId);
         correctAnswers++;
     }
 
