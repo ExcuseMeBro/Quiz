@@ -13,7 +13,7 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
-        android:layout_height="472dp"
+        android:layout_height="372dp"
         android:src="@drawable/main" />
 
     <TextView

@@ -1,13 +1,9 @@
 package com.example.quiz;
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
@@ -85,8 +81,8 @@ public class OrgansActivity extends AppCompatActivity implements View.OnClickLis
         savollar.add(new Question("42 : 6 = ?", "7"));
         savollarAll.add(new Question("42 : 6 = ?", "7"));
 
-        savollar.add(new Question("6 raqami birliklar xonasida joylashgan  uch xonali sonni toping.", "156"));
-        savollarAll.add(new Question("6 raqami birliklar xonasida joylashgan  uch xonali sonni toping.", "156"));
+        savollar.add(new Question("4 raqami birliklar xonasida joylashgan  uch xonali sonni toping.", "154"));
+        savollarAll.add(new Question("4 raqami birliklar xonasida joylashgan  uch xonali sonni toping.", "154"));
 
         savollar.add(new Question("Do`konga jami 97 kilogram kartoshka keltirildi. Tushgacha 23 kilogram, tushdan so`ng yana 15 kilogram kartoshka sotildi. Do`konda qancha kartoshka qoldi?", "59"));
         savollarAll.add(new Question("Do`konga jami 97 kilogram kartoshka keltirildi. Tushgacha 23 kilogram, tushdan so`ng yana 15 kilogram kartoshka sotildi. Do`konda qancha kartoshka qoldi?", "59"));
@@ -338,20 +334,37 @@ public class OrgansActivity extends AppCompatActivity implements View.OnClickLis
                     // kartochkani rasmga o'zgartirish
                     clickedView.setImageResource(organList.get(i));
                     clickedView.setOnClickListener(null);
-                    answer.setText("");
+                    if (i == 0) {
+                        answer.setText("Miya");
+                    } else if (i == 1) {
+                        answer.setText("O'pka");
+                    } else if (i == 2) {
+                        answer.setText("Jigar");
+                    } else if (i == 3) {
+                        answer.setText("Ichak");
+                    } else if (i == 4) {
+                        answer.setText("Yurak");
+                    } else if (i == 5) {
+                        answer.setText("Oshqozon");
+                    } else if (i == 6) {
+                        answer.setText("Buyrak");
+                    } else if (i == 7) {
+                        answer.setText("Ichak");
+                    }
+                    answer.setTextColor(Color.WHITE);
+                    answer.setTextSize(20);
+                    answer.setTypeface(null, Typeface.BOLD);
+                    answer.setBackgroundColor(Color.argb(100, 0, 0, 0));
+                    answer.setHeight(20);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+                        answer.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                    }
+                    answer.setGravity(Gravity.BOTTOM);
                     correctAnswers++;
                     if (correctAnswers == 8) {
-                        final Handler handler = new Handler(Looper.getMainLooper());
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                //Do something after 3000ms
-                                mediaPlayer.stop();
-                                finish();
-                                Intent intent = new Intent(OrgansActivity.this,GameWonActivity.class);
-                                startActivity(intent);
-                            }
-                        }, 3000);
+                        setTextMainQuestion("");
+                        ivQuestion.setVisibility(View.INVISIBLE);
+                        Toast.makeText(this, "Barakalla siz yutdingiz!", Toast.LENGTH_LONG).show();
                     } else {
                         setTextMainQuestion(selectedQuestions.get(correctAnswers).getQuestion());
                     }

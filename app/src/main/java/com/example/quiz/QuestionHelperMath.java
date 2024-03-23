@@ -66,7 +66,7 @@ class QuestionHelperMath extends SQLiteOpenHelper {
 
         arraylist.add(new Question("42 : 6 = ?", "7"));
 
-        arraylist.add(new Question("6 raqami birliklar xonasida joylashgan  uch xonali sonni toping.", "156"));
+        arraylist.add(new Question("4 raqami birliklar xonasida joylashgan  uch xonali sonni toping.", "154"));
 
         arraylist.add(new Question("Do`konga jami 97 kilogram kartoshka keltirildi. Tushgacha 23 kilogram, tushdan so`ng yana 15 kilogram kartoshka sotildi. Do`konda qancha kartoshka qoldi?", "59"));
 

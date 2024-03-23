@@ -81,7 +81,7 @@ public class QuizGameActivity extends AppCompatActivity {
 
         list.add(new Quiz("42 : 6 = ?", "8", "6", "7", "12", "7"));
 
-        list.add(new Quiz("6 raqami birliklar xonasida joylashgan  uch xonali sonni toping.", "167", "764", "584", "176", "176"));
+        list.add(new Quiz("4 raqami birliklar xonasida joylashgan  uch xonali sonni toping.", "167", "764", "584", "174", "174"));
 
         list.add(new Quiz("Do`konga jami 97 kilogram kartoshka keltirildi. Tushgacha 23 kilogram, tushdan so`ng yana 15 kilogram kartoshka sotildi. Do`konda qancha kartoshka qoldi?", "125", "105", "59", "60", "59"));
 
